@@ -24,7 +24,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-define("EPT_DL_VERSION", "1.3 (2018-10-19)"); // ePartool downloader script version
+define("EPT_DL_VERSION", "1.4 (2018-11-23)"); // ePartool downloader script version
 
 if ($_SERVER['QUERY_STRING'] == "download")  {
 
@@ -353,13 +353,13 @@ if ($_SERVER['QUERY_STRING'] == "download")  {
     
     echo '<p>' . $txt["php_version"] . ': ' . (float)phpversion() . ' ... ';
 
-    if (version_compare(phpversion(), '7.0.0', '<')) {
+    if (version_compare(phpversion(), '7.2.0', '<')) {
         
         echo '<span class="error">' . $txt["php_error"] . '</span><br />'; // PHP version is too old
 
         $stopper = "yes";
         
-    } elseif (version_compare(phpversion(), '7.1.0', '<')) {
+    } elseif (version_compare(phpversion(), '7.3.0', '<')) {
         
         echo '<span class="warning">' . $txt["php_warn"] . '</span><br />'; // PHP version is a bit outdated
         
