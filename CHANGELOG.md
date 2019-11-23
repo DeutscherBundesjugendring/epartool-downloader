@@ -1,5 +1,8 @@
 # Changelog
 
+## 2019-11-23 – v1.4
+
+* Drop support for PHP < 7.2
 
 ## 2018-10-19 – v1.3
 
